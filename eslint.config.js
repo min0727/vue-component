@@ -1,5 +1,7 @@
 import js from '@eslint/js';
+
 import pluginVue from 'eslint-plugin-vue';
+
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting';
 
 export default [
@@ -18,7 +20,14 @@ export default [
   skipFormatting,
   {
     rules: {
-      'semi': ['error', 'always'],
+      'padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', prev: 'import', next: '*' },  // インポート文の次に改行
+      ],
+      'indent': ['error', 2],  // インデントはスペース2つ
+      'semi': ['error', 'always'],  // セミコロンを常に使う
+      'quotes': ['error', 'single'],  // シングルクォートを使う
+      'no-unused-vars': ['warn'],  // 使われていない変数は警告
     },
   },
 ];
