@@ -11,7 +11,6 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "globals": "^15.11.0",
     "vue": "^3.5.12"
   },
   "devDependencies": {
