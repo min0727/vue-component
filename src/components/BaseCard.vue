@@ -1,11 +1,9 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-<h1 class="shadow-lg">hello</h1>
+  <div>
+    <slot />
+  </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
