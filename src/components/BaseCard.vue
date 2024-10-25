@@ -1,8 +1,19 @@
 <script setup></script>
 
 <template>
+  <!--  <div>-->
+  <!--    <slot />-->
+  <!--  </div>-->
   <div>
-    <slot />
+    <header>
+    <slot name="header" />
+  </header>
+  <main>
+    <slot name="main" />
+  </main>
+  <footer>
+    <slot name="footer" />
+  </footer>
   </div>
 </template>
 
