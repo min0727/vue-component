@@ -6,8 +6,9 @@ import BaseCard from '@/components/BaseCard.vue';
   <main class="flex-row space-y-2 items-center justify-center min-h-screen">
     <h1 class="text-4xl">slots</h1>
     <BaseCard>
-      <template #header>
+      <template #header="variable">
         <h2 class="text-2xl">こんにちは</h2>
+        <p>pageNumber:{{ variable.pageNumber }}</p>
       </template>
       <template #main>
         <p class="text-blue-400">元気ですか？</p>
