@@ -1,16 +1,19 @@
 <script setup>
-import BaseCard from '@/components/BaseCard.vue';
+import BaseCard from '@/components/BaseCard.vue'
 
-import CompA from '@/components/CompA.vue';
+import CompA from '@/components/CompA.vue'
 
-import CompB from '@/components/CompB.vue';
+// import CompB from '@/components/CompB.vue';
+import { defineAsyncComponent, shallowRef } from 'vue'
 
-import { shallowRef } from 'vue';
-
-const currentComp = shallowRef(CompA);
+// CompBを遅延読み込みコンポーネントにする
+const CompB = defineAsyncComponent(() => {
+  return import('@/components/CompB.vue')
+})
+const currentComp = shallowRef(CompA)
 const tempObj = shallowRef({
   count: 1,
-});
+})
 </script>
 <template>
   <main class="flex-row space-y-2 items-center justify-center min-h-screen">
