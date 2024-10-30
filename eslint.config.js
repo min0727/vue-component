@@ -31,7 +31,7 @@ export default [
   {
     // ECMAScript 2015（ES6）互換性のためのオプションを設定
     languageOptions: {
-      ecmaVersion: 2015, // ECMAScript 2015（ES6）を有効化
+      ecmaVersion: 2020, // ECMAScript 2020を有効化
       sourceType: 'module', // ES6のモジュール構文をサポート
     },
     rules: {
@@ -55,6 +55,8 @@ export default [
       'no-var': 'error', // `var`の使用を禁止し、`let`や`const`を推奨
       'prefer-const': 'error', // 再代入されない変数には`const`を使用
       'arrow-parens': ['error', 'always'], // アロー関数の引数に必ず括弧をつける（可読性向上）
+      'no-console': 'warn', // `console`の使用を警告
+      'vue/define-macros-order': 'error', // defineAsyncComponentなどの順序に関するエラーチェック
     },
   },
 ];
