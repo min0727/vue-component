@@ -50,9 +50,8 @@ export default [
       'no-unused-vars': ['warn'],
 
       // 推奨ルールの追加
-      'eqeqeq': ['error', 'always'], // 厳密等価演算子（=== と !==）を強制
-      'no-console': ['warn'], // `console.log`を警告（本番環境では削除推奨）
-      'curly': ['error', 'all'], // 制御構文の波括弧を常に使用（コードの読みやすさ向上）
+      eqeqeq: ['error', 'always'], // 厳密等価演算子（=== と !==）を強制
+      curly: ['error', 'all'], // 制御構文の波括弧を常に使用（コードの読みやすさ向上）
       'no-var': 'error', // `var`の使用を禁止し、`let`や`const`を推奨
       'prefer-const': 'error', // 再代入されない変数には`const`を使用
       'arrow-parens': ['error', 'always'], // アロー関数の引数に必ず括弧をつける（可読性向上）
